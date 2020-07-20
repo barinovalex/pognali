@@ -22,18 +22,20 @@
     </ul>
   </nav>
 </header>
-<main class="page-name">
+<main class="page-main">
   <h1 class="visually-hidden">Приложение для путешествий "Поганли?"</h1>
   <section class="slide">
     <h2 class="visually-hidden">Простота использования приложения</h2>
-    <b class="slide__title"></b>
+    <b class="slide__title">В путешествие
+      с крутыми попутчиками!
+    </b>
     <blockquote class="slide__blockquote">
       <p class="slide__text">«Лучшее приложение,
         что я видел в жизни!»</p>
       <cite class="slide__author-name">Мурат Эльтазинглавный редактор
         газеты «гаджетлайф»</cite>
     </blockquote>
-    <ul class="steps-list">
+    <ul class="slide__steps steps-list">
       <li class="steps-list__item">Выберите
         направление</li>
       <li class="steps-list__item">Изучите идеи
@@ -61,7 +63,7 @@
       и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться
       и чем можно там заняться.
     </p>
-    <ul class="directions-list">
+    <ul class="directions__countries directions-list">
       <li class="directions-list__item">
         <a class="direction-item" href="#">
           <h2 class="direction-item__title">
@@ -107,13 +109,13 @@
     <ul class="companion__list">
       <li class="companion-item">
         <img class="companion-item__avatar" src="" alt="Таня Фирсова" width="270px" height="270px">
-        <ul class="companion-list-flag">
+        <ul class="companion-item__flags companion-list-flag">
           <li class="companion-list-flag__item"><img src="" alt="Страна" width="35px" height="24px"></li>
           <li class="companion-list-flag__item"><img src="" alt="Страна" width="35px" height="24px"></li>
           <li class="companion-list-flag__item"><img src="" alt="Страна" width="35px" height="24px"></li>
         </ul>
         <h3 class="companion-item__name">Таня Фирсова</h3>
-        <ul class="companion-list-hashtag">
+        <ul class="companion-item__hashtags companion-list-hashtag">
           <li class="companion-list-hashtag__item"><a href="#">#ЗОЖ</a></li>
           <li class="companion-list-hashtag__item"><a href="#">#ПП</a></li>
           <li class="companion-list-hashtag__item"><a href="#">#Фитнес</a></li>
@@ -121,26 +123,26 @@
           <li class="companion-list-hashtag__item"><a href="#">#авокадо</a></li>
           <li class="companion-list-hashtag__item"><a href="#">#смузи</a></li>
         </ul>
-        <ul class="companion-travel-type">
+        <ul class="companion-item__travel-type companion-travel-type">
           <li class="companion-travel-type__item companion-travel-type__item--active"><img src="" alt="На самолете"></li>
           <li class="companion-travel-type__item"><img src="" alt="На автобусе"></li>
           <li class="companion-travel-type__item"><img src="" alt="На велосипеде"></li>
           <li class="companion-travel-type__item"><img src="" alt="Пешком"></li>
         </ul>
-        <div class="companion-level">
+        <div class="companion-item__level companion-level">
           <span class="companion-level__level">80</span>
           <span class="companion-level_title">level</span>
         </div>
       </li>
       <li class="companion-item">
         <img class="companion-item__avatar" src="" alt="Таня Фирсова" width="270px" height="270px">
-        <ul class="companion-list-flag">
+        <ul class="companion-item__flags companion-list-flag">
           <li class="companion-list-flag__item"><img src="" alt="Страна" width="35px" height="24px"></li>
           <li class="companion-list-flag__item"><img src="" alt="Страна" width="35px" height="24px"></li>
           <li class="companion-list-flag__item"><img src="" alt="Страна" width="35px" height="24px"></li>
         </ul>
         <h3 class="companion-item__name">Таня Фирсова</h3>
-        <ul class="companion-list-hashtag">
+        <ul class="companion-item__hashtags companion-list-hashtag">
           <li class="companion-list-hashtag__item"><a href="#">#ЗОЖ</a></li>
           <li class="companion-list-hashtag__item"><a href="#">#ПП</a></li>
           <li class="companion-list-hashtag__item"><a href="#">#Фитнес</a></li>
@@ -148,13 +150,13 @@
           <li class="companion-list-hashtag__item"><a href="#">#авокадо</a></li>
           <li class="companion-list-hashtag__item"><a href="#">#смузи</a></li>
         </ul>
-        <ul class="companion-travel-type">
+        <ul class="companion-item__travel-type companion-travel-type">
           <li class="companion-travel-type__item companion-travel-type__item--active"><img src="" alt="На самолете"></li>
           <li class="companion-travel-type__item"><img src="" alt="На автобусе"></li>
           <li class="companion-travel-type__item"><img src="" alt="На велосипеде"></li>
           <li class="companion-travel-type__item"><img src="" alt="Пешком"></li>
         </ul>
-        <div class="companion-level">
+        <div class="companion-item__level companion-level">
           <span class="companion-level__level">80</span>
           <span class="companion-level_title">level</span>
         </div>
@@ -164,7 +166,7 @@
   </section>
   <section class="price main-section">
     <h2 class="price__title main-section__title">Добавьте свой профиль!</h2>
-    <table class="price-table">
+    <table class="price__list price-table">
       <tr>
         <td>1</td>
         <td>Базовое размещение</td>
@@ -189,9 +191,9 @@
       Зарегистрируйтесь, это быстро и бесплатно!
       Уже зарегистрированы? Тогда скорее <a href="">авторизуйтесь</a>.
     </p>
-    <form action="" class="registration-form">
-      <input type="text" placeholder="E-mail" name="email">
-      <button type="submit" class="registration-form__button button">Регистрация</button>
+    <form action="" class="registration__block-form registration-form">
+      <input class="registration-form__item" type="text" placeholder="E-mail" name="email">
+      <button class="registration-form__button button" type="submit">Регистрация</button>
     </form>
     <p class="registration__descr main-section__descr">
       Зарегистрируйтесь, это быстро и бесплатно!
