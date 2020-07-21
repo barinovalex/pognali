@@ -1,0 +1,11 @@
+.bottom-block-decorate(@radius: 60px, @color: @dark-blue-background) {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: @radius + 1px;
+  bottom: -1*@radius;
+  left: 0;
+
+  border-radius: 0 0 @radius @radius;
+  background-color: @color;
+}

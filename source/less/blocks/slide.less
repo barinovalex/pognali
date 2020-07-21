@@ -1,0 +1,38 @@
+.slide {
+  padding: 0 25px;
+  background-color: @dark-blue-background;
+  position: relative;
+
+  &::after {
+    .bottom-block-decorate(30px,@dark-blue-background);
+  }
+}
+
+@media (min-width: 768px) {
+  .slide {
+    padding: 0 40px;
+
+    &::after {
+      .bottom-block-decorate;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .slide {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 840px;
+    padding: 0 60px;
+
+    &__slogan {
+      width: 560px;
+    }
+
+    &__blockquote {
+      width: 285px;
+    }
+
+  }
+}
