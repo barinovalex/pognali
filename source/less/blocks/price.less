@@ -1,0 +1,43 @@
+.price {
+  &__list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .price {
+    &__item {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__value {
+      width: 198px;
+    }
+
+    &__name {
+      width: 465px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .price {
+    height: 840px;
+
+    &__item {
+      justify-content: start;
+    }
+
+    &__value {
+      width: 444px;
+    }
+
+    &__name {
+      width: 619px;
+    }
+  }
+}

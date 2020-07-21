@@ -1,0 +1,30 @@
+.page-footer {
+  width: 270px;
+  margin: 0 auto;
+  padding: 0 25px;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  &__copyright {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 768px) {
+  .page-footer {
+    width: 688px;
+    padding: 0 40px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1440px) {
+  .page-footer {
+    width: 1320px;
+    padding: 0 60px;
+  }
+}

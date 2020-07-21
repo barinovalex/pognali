@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Личный проект</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -11,15 +12,23 @@
     <img class="site-logo__image" src="" alt="Погнали?" width="100px" height="19px">
   </a>
   <nav class="main-nav">
+    <a href="#" class="main-nav__logo site-logo">
+      <img class="site-logo__image" src="" alt="Погнали?" width="100px" height="19px">
+    </a>
     <ul class="main-nav__list site-list">
       <li class="site-list__item site-list__item--active"><a href="#">О сервисе</a></li>
       <li class="site-list__item"><a href="#">Направления</a></li>
       <li class="site-list__item"><a href="#">Попутчики</a></li>
     </ul>
     <ul class="main-nav__list user-list">
-      <li class="user-list__item"><a class="user-list__call" href="#">Позвонить</a></li>
-      <li class="user-list__item"><a class="user-list__feedback" href="#">Написать</a></li>
+      <li class="user-list__item"><a class="user-list__call" href="#">8 800 555-86-28</a></li>
+      <li class="user-list__item"><a class="user-list__feedback" href="#">mail@htmlacademy.ru</a></li>
       <li class="user-list__item"><a class="user-list__login" href="#">Авторизация</a></li>
+    </ul>
+    <ul class="main-nav__social social-link">
+      <li><a href=""><img src="" alt="" class=""></a></li>
+      <li><a href=""><img src="" alt="" class=""></a></li>
+      <li><a href=""><img src="" alt="" class=""></a></li>
     </ul>
   </nav>
 </header>
@@ -27,16 +36,16 @@
   <h1 class="visually-hidden">Приложение для путешествий "Поганли?"</h1>
   <section class="slide">
     <h2 class="visually-hidden">Простота использования приложения</h2>
-    <b class="slide__title">В путешествие
+    <b class="slide__slogan">В путешествие<br>
       с крутыми попутчиками!
     </b>
     <blockquote class="slide__blockquote">
       <p class="slide__text">«Лучшее приложение,
         что я видел в жизни!»</p>
-      <cite class="slide__author-name">Мурат Эльтазинглавный редактор
+      <cite class="slide__author-name">Мурат Эльтазин главный редактор
         газеты «гаджетлайф»</cite>
     </blockquote>
-    <ul class="slide__steps steps-list">
+    <ol class="slide__steps steps-list">
       <li class="steps-list__item">Выберите
         направление</li>
       <li class="steps-list__item">Изучите идеи
@@ -45,10 +54,10 @@
         кто похож на вас</li>
       <li class="steps-list__item">Путешествуйте
         вместе!</li>
-    </ul>
+    </ol>
   </section>
   <section class="about main-section">
-    <h2 class="about__title main-section__title">О приложении</h2>
+    <h2 class="about__title main-section__title">О сервисе</h2>
     <p class="about__large-descr main-section__descr">
       Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
     </p>
@@ -167,23 +176,20 @@
   </section>
   <section class="price main-section">
     <h2 class="price__title main-section__title">Добавьте свой профиль!</h2>
-    <table class="price__list price-table">
-      <tr>
-        <td>1</td>
-        <td>Базовое размещение</td>
-        <td>Бесплатно</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Вывод на первых позициях</td>
-        <td>99 руб./мес</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Кастомный цвет карточки</td>
-        <td>59 руб./мес</td>
-      </tr>
-    </table>
+    <ol class="price__list">
+      <li class="price__item">
+        <p class="price__name">Базовое размещение</p>
+        <p class="price__value">Бесплатно</p>
+      </li>
+      <li class="price__item">
+        <p class="price__name">Вывод на первых позициях</p>
+        <p class="price__value">99 руб./мес</p>
+      </li>
+      <li class="price__item">
+        <p class="price__name">Кастомный цвет карточки</p>
+        <p class="price__value">59 руб./мес</p>
+      </li>
+    </ol>
     <a href="" class="price__link">Показать тарифы для бизнеса</a>
   </section>
   <section class="registration main-section">
@@ -193,22 +199,22 @@
       Уже зарегистрированы? Тогда скорее <a href="">авторизуйтесь</a>.
     </p>
     <form action="" class="registration__block-form registration-form">
-      <input class="registration-form__item" type="text" placeholder="E-mail" name="email">
+      <label for="name">Ваше имя</label>
+      <input class="registration-form__item" type="text" placeholder="E-mail" id="name" name="email">
       <button class="registration-form__button button" type="submit">Регистрация</button>
     </form>
     <p class="registration__descr main-section__descr">
-      Зарегистрируйтесь, это быстро и бесплатно!
-      Уже зарегистрированы? Тогда скорее <a href="">авторизуйтесь</a>.
+      Остались вопросы? Мы с радостью на них ответим!
     </p>
-    <span class="registration__phone">8 800 555-86-28</span>
-    <span class="registration__email">mail@htmlacademy.ru</span>
+    <p class="registration__phone">8 800 555-86-28</p>
+    <p class="registration__email">mail@htmlacademy.ru</p>
   </section>
   <section class="main-contact main-section">
     <h2 class="visually-hidden">Контакты</h2>
-    <span class="main-contact__adress">ул. Большая Конюшенная, 19/8</span>
+    <p class="main-contact__address">ул. Большая Конюшенная, 19/8</p>
     <a href="#" class="main-contact__link button">Проложить маршрут</a>
   </section>
-  <section class="main-map">
+  <section class="main-map main-section">
     <h2 class="visually-hidden">Схема проезда</h2>
     <img src="" alt="Схема проезда">
   </section>
@@ -222,9 +228,9 @@
     <li><a href=""><img src="" alt="" class=""></a></li>
     <li><a href=""><img src="" alt="" class=""></a></li>
   </ul>
-  <div class="page-footer__copyright copyright">
-    <b class="copyright__text">Разработано:</b>
-    <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+  <div class="page-footer__copyright">
+    <b class="copyright__copyright-text">Разработано:</b>
+    <a class="copyright__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
   </div>
 </footer>
 </body>

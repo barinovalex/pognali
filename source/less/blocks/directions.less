@@ -1,0 +1,34 @@
+.directions {
+  &__title,
+  &__descr {
+    width: 220px;
+  }
+
+  &__countries {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .directions {
+    &__title,
+    &__descr {
+      width: 420px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .directions {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 840px;
+
+    &__countries {
+      order: -1;
+    }
+  }
+}
