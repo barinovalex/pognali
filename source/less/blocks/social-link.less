@@ -1,0 +1,35 @@
+.social-link {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+
+  &__item:not(:last-child) {
+    margin-right: 28px;
+  }
+}
+
+@media (min-width: 768px) {
+  .social-link {
+    justify-content: start;
+
+    &__item--fb svg{
+      width: 14px;
+      height: 28px;
+    }
+
+    &__item--vk svg{
+      width: 31px;
+      height: 16px;
+    }
+
+    &__item--ins svg{
+      width: 24px;
+      height: 24px;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 33px;
+    }
+  }
+}
