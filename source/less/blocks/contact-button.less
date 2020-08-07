@@ -1,0 +1,130 @@
+.contact-button {
+  position: relative;
+  padding: 14px 0 15px 60px;
+
+  color: @yellow-buttons;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &__icon {
+    position: absolute;
+    left: 14px;
+
+    fill: @yellow-buttons;
+  }
+
+  &__icon--location {
+    left: 16px;
+    width: 14px;
+    top: 13px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+
+    background-color: #121936;
+  }
+
+  &:hover[href] {
+    color: #ffbd30;
+  }
+
+  &:hover[href] &__icon {
+    fill: #ffbd30;
+  }
+
+  &:active[href] {
+    opacity: 0.3;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .contact-button {
+    padding: 20px 0 20px 90px;
+
+    font-size: 28px;
+    line-height: 28px;
+
+    &__icon {
+      width: 27px;
+      height: 27px;
+      left: 20px;
+    }
+
+    &__icon--location {
+      left: 23px;
+      width: 21px;
+      top: 20px;
+    }
+
+    &::before {
+      width: 68px;
+      height: 68px;
+      left: 0;
+      top: 0;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .contact-button {
+    padding: 29px 0 33px 122px;
+
+    font-size: 28px;
+    line-height: 28px;
+
+    &__icon {
+      width: 36px;
+      height: 36px;
+      left: 27px;
+    }
+
+    &__icon--location {
+      left: 31px;
+      width: 28px;
+      top: 26px;
+    }
+
+    &::before {
+      width: 90px;
+      height: 90px;
+      left: 0;
+      top: 0;
+    }
+  }
+}
+
+.contact-button--blue-two {
+  padding: 2px 0 3px 60px;
+
+  line-height: 22px;
+
+  color: @dark-blue-background;
+}
+
+@media (min-width: 768px) {
+  .contact-button--blue-two {
+    padding: 20px 0 20px 90px;
+
+    line-height: 28px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .contact-button--blue-two {
+    padding: 29px 0 33px 122px;
+
+    line-height: 28px;
+  }
+}
+

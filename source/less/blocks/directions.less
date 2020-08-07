@@ -1,21 +1,54 @@
 .directions {
+  padding: 70px 25px 0;
+  position: relative;
+
+  .bottom-block-decorate(30px, @light-blue-background);
+
   &__title,
   &__descr {
+    margin-left: 25px;
+    margin-bottom: 4px;
     width: 220px;
   }
 
+  &__descr {
+    color: @dark-text;
+    margin-bottom: 60px;
+  }
+
   &__countries {
-    margin: 0;
+    margin: 0 0 16px 0;
     padding: 0;
     list-style: none;
   }
+
+  &__link {
+    width: 100%;
+  }
+
 }
 
 @media (min-width: 768px) {
   .directions {
+    padding: 75px 75px 0;
+
+    background: @light-blue-background url("../img/flags-back@1x.png") calc(100% - 40px) 85px no-repeat;
+
+    .bottom-block-decorate(60px, @light-blue-background);
+
     &__title,
     &__descr {
-      width: 420px;
+      margin-left: 0;
+      width: 345px;
+      margin-bottom: 60px;
+    }
+
+    &__descr {
+      margin-bottom: 110px;
+    }
+
+    &__countries {
+      margin: 0 0 43px 0;
     }
   }
 }
@@ -25,10 +58,26 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 840px;
+    height: 750px;
+    padding: 160px 0 0 130px;
+    box-sizing: border-box;
+
+    background: @light-blue-background url("../img/flags-back@1x.png") calc(100% - 60px) 88px no-repeat;
 
     &__countries {
       order: -1;
+      margin-bottom: 55px;
+    }
+
+    &__descr {
+      margin-bottom: 0;
+    }
+
+    &__link {
+      margin-top: auto;
+      margin-bottom: 130px;
+      width: auto;
+      align-self: start;
     }
   }
 }

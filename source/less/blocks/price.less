@@ -1,35 +1,241 @@
 .price {
+  padding: 80px 25px 3px 50px;
+  position: relative;
+
+  background: @light-blue-background url("../img/rates@1x.png") calc(100% - 25px) 65px no-repeat;
+  background-size: 99px 99px;
+
+  .bottom-block-decorate(30px, @light-blue-background);
+
+  &__title {
+    width: 110px;
+    margin-bottom: 60px;
+  }
+
   &__list {
     margin: 0;
     padding: 0;
+    position: relative;
 
     list-style: none;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 200px;
+      height: 1px;
+      top: -15px;
+
+      background-color: #e1e3e9;
+    }
+
+    &::after {
+      top: auto;
+      bottom: -15px;
+    }
+  }
+
+  &__item {
+    width: 200px;
+    position: relative;
+    margin-bottom: 30px;
+
+    color: @dark-text;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+
+    &::before {
+      content: "1";
+      position: absolute;
+      top: -5px;
+      right: -44px;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+
+      background-color: #ffa530;
+
+      text-align: center;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 34px;
+    }
+
+    &:nth-child(2)::before {
+      content: "2";
+
+      background-color: #ffbd30;
+    }
+
+    &:nth-child(3)::before {
+      content: "3";
+
+      background-color: @yellow-buttons;
+    }
+
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      bottom: -15px;
+
+      background-color: #e1e3e9;
+    }
+  }
+
+  &__name,
+  &__value {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__link {
+    text-align: center;
+    text-decoration: none;
+    color: @dark-blue-background;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
   }
 }
 
 @media (min-width: 768px) {
   .price {
+    padding: 140px 0 3px 0;
+
+    background: @light-blue-background;
+
+    .bottom-block-decorate(60px, @light-blue-background);
+
+    &__title {
+      width: auto;
+      margin-bottom: 90px;
+      text-align: center;
+    }
+
+    &__list {
+      margin: 0 0 33px 130px;
+
+      &::after {
+        width: 562px;
+        top: auto;
+        bottom: 0;
+      }
+
+      &::before {
+        width: 562px;
+        top: 0;
+        bottom: auto;
+      }
+    }
+
     &__item {
       display: flex;
       justify-content: space-between;
+      width: 562px;
+      margin-bottom: 0;
+
+      font-size: 28px;
+      line-height: 67px;
+
+      &::before {
+        top: 0;
+        left: -92px;
+        right: auto;
+        width: 67px;
+        height: 67px;
+
+        font-size: 28px;
+        line-height: 67px;
+      }
+
+      &:not(:last-child)::after {
+        bottom: 0;
+      }
     }
 
     &__value {
       width: 198px;
+      text-align: right;
     }
 
     &__name {
       width: 465px;
+    }
+
+    &__link {
+      margin-left: 130px;
+      margin-bottom: 24px;
+      font-size: 20px;
+      line-height: 67px;
+      position: relative;
+      display: block;
+      width: 562px;
+      text-align: left;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: -92px;
+        width: 67px;
+        height: 67px;
+        border-radius: 50%;
+
+        background: #e2e5f2 url("../img/business.svg") calc(50%) calc(50%) no-repeat;
+        background-size: 17px 21px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 99px;
+        height: 99px;
+        right: 0;
+        top: calc(50% - 50px);
+
+        background: @light-blue-background url("../img/rates@1x.png") 0 0 no-repeat;
+        background-size: 99px 99px;
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
     }
   }
 }
 
 @media (min-width: 1440px) {
   .price {
-    height: 840px;
+    height: 680px;
+    padding: 160px 0 3px 0;
+
+    &__title {
+      margin-bottom: 130px;
+    }
+
+    &__list {
+      margin: 0 0 33px 220px;
+
+      background: @light-blue-background url("../img/rates@1x.png") calc(100% - 133px) 50% no-repeat;
+      background-size: 198px 198px;
+
+      &::after,
+      &::before {
+        width: 812px;
+      }
+    }
 
     &__item {
       justify-content: start;
+      width: 812px;
     }
 
     &__value {
@@ -38,6 +244,14 @@
 
     &__name {
       width: 619px;
+    }
+
+    &__link {
+      margin-left: 220px;
+
+      &::after {
+        display: none;
+      }
     }
   }
 }

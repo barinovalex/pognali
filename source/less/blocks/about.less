@@ -1,0 +1,67 @@
+.about {
+  background-color: @light-blue-background;;
+
+  &__wrapper {
+    position: relative;
+    padding: 30px 55px 50px 50px;
+    border-radius: 0 0 30px 30px;
+    background: @dark-blue-background url("../img/about-mobile@1x.png") 18px 100% no-repeat;
+  }
+
+  &__large-descr,
+  &__title {
+    margin: 0 0 20px 0;
+  }
+
+  &__small-descr {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+  }
+
+  &__link {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .about {
+    &__wrapper {
+      background: @dark-blue-background url("../img/about-tablet@1x.png") 40px 96px no-repeat;
+      padding: 139px 395px 88px 75px;
+      border-radius: 0 0 30px 30px;
+    }
+
+
+    &__large-descr,
+    &__title {
+      margin: 0 0 40px 0;
+    }
+
+    &__small-descr {
+      margin: 0 0 40px 0;
+
+      font-size: 21px;
+      line-height: 25px;
+    }
+
+    &__link {
+      display: inline-block;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .about {
+    &__wrapper {
+      background: @dark-blue-background url("../img/about-desktop@1x.png") calc(100% - 60px) 100% no-repeat;
+      padding: 130px 700px 163px 130px;
+      border-radius: 0 0 60px 60px;
+    }
+
+    &__small-descr {
+      margin: 0 0 80px 0;
+    }
+  }
+}
