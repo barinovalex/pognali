@@ -1,11 +1,18 @@
 .about {
-  background-color: @light-blue-background;;
+  border-radius: 0 0 30px 30px;
+  position: relative;
+  z-index: 25;
+
+  background: @dark-blue-background url("../img/about-mobile@1x.png") 50% 100% no-repeat;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background: @dark-blue-background url("../img/about-mobile@2x.png") 50% 100% no-repeat;
+    background-size: 292px auto;
+  }
 
   &__wrapper {
     position: relative;
-    padding: 30px 55px 50px 50px;
-    border-radius: 0 0 30px 30px;
-    background: @dark-blue-background url("../img/about-mobile@1x.png") 18px 100% no-repeat;
+    padding: 30px 25px 50px 25px;
   }
 
   &__large-descr,
@@ -27,10 +34,17 @@
 
 @media (min-width: 768px) {
   .about {
+    border-radius: 0 0 60px 60px;
+
+    background: @dark-blue-background url("../img/about-tablet@1x.png") calc(50% + 15px) 96px no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background: @dark-blue-background url("../img/about-tablet@2x.png") calc(85%) 96px no-repeat;
+      background-size: 376px auto;
+    }
+
     &__wrapper {
-      background: @dark-blue-background url("../img/about-tablet@1x.png") 40px 96px no-repeat;
       padding: 139px 395px 88px 75px;
-      border-radius: 0 0 30px 30px;
     }
 
 
@@ -54,10 +68,17 @@
 
 @media (min-width: 1440px) {
   .about {
+    margin-top: -60px;
+
+    background: @dark-blue-background url("../img/about-desktop@1x.png") calc(50% + 350px) 100% no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background: @dark-blue-background url("../img/about-desktop@2x.png") calc(50% + 350px) 100% no-repeat;
+      background-size: 630px auto;
+    }
+
     &__wrapper {
-      background: @dark-blue-background url("../img/about-desktop@1x.png") calc(100% - 60px) 100% no-repeat;
-      padding: 130px 700px 163px 130px;
-      border-radius: 0 0 60px 60px;
+      padding: 190px 700px 163px 130px;
     }
 
     &__small-descr {

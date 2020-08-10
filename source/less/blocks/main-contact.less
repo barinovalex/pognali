@@ -1,11 +1,14 @@
 .main-contact {
   margin-top: -30px;
-  padding: 60px 25px 35px 25px;
-  border-radius: 0 0 30px 30px;
   position: relative;
-  z-index: 3;
+  z-index: 4;
+  border-radius: 0 0 30px 30px;
 
   background-color: @yellow-buttons;
+
+  &__wrapper {
+    padding: 60px 25px 35px 25px;
+  }
 
   &__address {
     margin: 0 0 35px 0;
@@ -40,16 +43,23 @@
 @media (min-width: 768px) {
   .main-contact {
     margin-top: -60px;
-    padding: 107px 75px 85px 75px;
     border-radius: 0 0 60px 60px;
+
+    &__wrapper {
+      padding: 107px 75px 85px 75px;
+    }
+
   }
 }
 
 @media (min-width: 1440px) {
   .main-contact {
-    padding: 114px 134px 50px 280px;
-    display: flex;
-    justify-content: space-between;
+
+    &__wrapper {
+      padding: 114px 134px 50px 280px;
+      display: flex;
+      justify-content: space-between;
+    }
 
     &__link {
       width: auto;

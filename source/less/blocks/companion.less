@@ -1,10 +1,15 @@
 .companion {
-  padding: 100px 25px 5px;
+  margin-top: -30px;
   position: relative;
+  z-index: 15;
+  border-radius: 0 0 30px 30px;
+  background-color: @dark-blue-background;
 
-  background: @dark-blue-background url("../img/companion-mobile.png") -25px 69px no-repeat;
+  &__wrapper {
+    padding: 100px 25px 30px;
 
-  .bottom-block-decorate(30px, @dark-blue-background);
+    background: url("../img/companion-mobile.png") -25px 69px no-repeat;
+  }
 
   &__title,
   &__descr,
@@ -31,15 +36,21 @@
   &__list-item {
     margin-bottom: 10px;
   }
+
+  &__link {
+    width: 100%;
+  }
 }
 
 @media (min-width: 768px) {
   .companion {
-    padding: 200px 75px 15px;
+    border-radius: 0 0 60px 60px;
 
-    background: @dark-blue-background url("../img/companion-tablet.png") 40px 140px no-repeat;
+    &__wrapper {
+      padding: 200px 75px 88px;
 
-    .bottom-block-decorate(60px, @dark-blue-background);
+      background: url("../img/companion-tablet.png") 40px 140px no-repeat;
+    }
 
     &__title,
     &__descr,
@@ -69,20 +80,24 @@
 
 @media (min-width: 1440px) {
   .companion {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 750px;
-    align-content: space-between;
-    padding: 200px 75px 15px;
-    box-sizing: border-box;
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: space-between;
+      padding: 200px 75px 134px;
 
-    background: @dark-blue-background url("../img/companion-desktop.png") 30px 140px no-repeat;
+      background: url("../img/companion-desktop.png") 30px 140px no-repeat;
+    }
 
     &__list {
       width: 630px;
-      order: 10;
+      position: absolute;
+      left: 620px;
+    }
 
+    &__link {
+      width: auto;
     }
   }
 }

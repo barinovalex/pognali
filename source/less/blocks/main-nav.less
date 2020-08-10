@@ -1,10 +1,9 @@
 .main-nav {
-  position: absolute;
-  top: 0;
-  left: -1px;
   width: 272px;
   padding: 27px 25px 0;
   z-index: 1000000;
+  overflow: auto;
+  height: calc(100vh - 100px);
 
   background-color: #ffffff;
 
@@ -38,6 +37,8 @@
 
 .main-nav--closed {
   display: none;
+  overflow: hidden;
+  height: auto;
 }
 
 @media (min-width: 768px) {
@@ -83,7 +84,7 @@
     padding: 0;
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: center;
 
     background-color: transparent;
 

@@ -1,11 +1,17 @@
 .price {
-  padding: 80px 25px 3px 50px;
+  margin-top: -30px;
   position: relative;
+  z-index: 10;
+  border-radius: 0 0 30px 30px;
+  background-color: @light-blue-background;
 
-  background: @light-blue-background url("../img/rates@1x.png") calc(100% - 25px) 65px no-repeat;
-  background-size: 99px 99px;
+  &__wrapper {
+    padding: 80px 25px 30px 50px;
+    position: relative;
 
-  .bottom-block-decorate(30px, @light-blue-background);
+    background: url("../img/rates@1x.png") calc(100% - 25px) 65px no-repeat;
+    background-size: 99px 99px;
+  }
 
   &__title {
     width: 110px;
@@ -105,11 +111,13 @@
 
 @media (min-width: 768px) {
   .price {
-    padding: 140px 0 3px 0;
+    margin-top: -60px;
+    border-radius: 0 0 60px 60px;
 
-    background: @light-blue-background;
-
-    .bottom-block-decorate(60px, @light-blue-background);
+    &__wrapper {
+      padding: 135px 40px 64px 40px;
+      background: transparent;
+    }
 
     &__title {
       width: auto;
@@ -214,8 +222,9 @@
 
 @media (min-width: 1440px) {
   .price {
-    height: 680px;
-    padding: 160px 0 3px 0;
+    &__wrapper {
+      padding: 165px 0 165px;
+    }
 
     &__title {
       margin-bottom: 130px;

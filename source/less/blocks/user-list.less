@@ -100,15 +100,7 @@
     }
 
     &__login {
-      position: absolute;
-      display: block;
-      right: 40px;
-      top: 40px;
-      z-index: 2000000;
-
-      font-size: 20px;
-      font-weight: 700;
-      line-height: 30px;
+      display: none;
     }
   }
 }
@@ -116,6 +108,7 @@
 @media (min-width: 1440px) {
   .user-list {
     flex-direction: row;
+    align-items: center;
 
     &__item {
       margin: 0;
@@ -127,6 +120,7 @@
 
     &__link {
       font-size: 0;
+      line-height: 0;
     }
 
     &__item:not(:last-child) {
@@ -169,12 +163,13 @@
     }
 
     &__login {
+      display: block;
       margin: 0;
       position: static;
+
       font-size: 20px;
+      line-height: 30px;
       font-weight: 700;
-      right: auto;
-      top: auto;
     }
   }
 }
