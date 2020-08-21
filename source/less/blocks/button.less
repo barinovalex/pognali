@@ -1,0 +1,52 @@
+.button {
+  position: relative;
+  padding: 22px 126px 22px 24px;
+  border-radius: 10px;
+  border: none;
+  display: inline-block;
+  box-sizing: border-box;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  text-decoration: none;
+  color: rgba(29, 46, 91, 1);
+
+  background-color: @yellow-buttons;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 28px;
+    top: 50%;
+    margin-top: -7px;
+
+    border: 7px solid;
+    border-color: transparent transparent transparent rgba(29, 46, 91, 1);
+    border-right: 0;
+  }
+
+  &:hover {
+    background-color: #ffbd30;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+
+    &::after {
+      border-color: transparent transparent transparent rgba(29, 46, 91, 0.3);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .button {
+    padding: 27px 126px 27px 34px;
+    border-radius: 20px;
+
+    font-size: 24px;
+    line-height: 24px;
+  }
+}

@@ -1,0 +1,88 @@
+.about {
+  border-radius: 0 0 30px 30px;
+  position: relative;
+  z-index: 25;
+
+  background: @dark-blue-background url("../img/about-mobile@1x.png") 50% 100% no-repeat;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background: @dark-blue-background url("../img/about-mobile@2x.png") 50% 100% no-repeat;
+    background-size: 292px auto;
+  }
+
+  &__wrapper {
+    position: relative;
+    padding: 30px 25px 50px 25px;
+  }
+
+  &__large-descr,
+  &__title {
+    margin: 0 0 20px 0;
+  }
+
+  &__small-descr {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+  }
+
+  &__link {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .about {
+    border-radius: 0 0 60px 60px;
+
+    background: @dark-blue-background url("../img/about-tablet@1x.png") calc(50% + 15px) 96px no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background: @dark-blue-background url("../img/about-tablet@2x.png") calc(85%) 96px no-repeat;
+      background-size: 376px auto;
+    }
+
+    &__wrapper {
+      padding: 139px 395px 88px 75px;
+    }
+
+
+    &__large-descr,
+    &__title {
+      margin: 0 0 40px 0;
+    }
+
+    &__small-descr {
+      margin: 0 0 40px 0;
+
+      font-size: 21px;
+      line-height: 25px;
+    }
+
+    &__link {
+      display: inline-block;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .about {
+    margin-top: -60px;
+
+    background: @dark-blue-background url("../img/about-desktop@1x.png") calc(50% + 350px) 100% no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background: @dark-blue-background url("../img/about-desktop@2x.png") calc(50% + 350px) 100% no-repeat;
+      background-size: 630px auto;
+    }
+
+    &__wrapper {
+      padding: 190px 700px 163px 130px;
+    }
+
+    &__small-descr {
+      margin: 0 0 80px 0;
+    }
+  }
+}

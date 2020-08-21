@@ -1,41 +1,103 @@
 .companion {
+  margin-top: -30px;
+  position: relative;
+  z-index: 15;
+  border-radius: 0 0 30px 30px;
+  background-color: @dark-blue-background;
+
+  &__wrapper {
+    padding: 100px 25px 30px;
+
+    background: url("../img/companion-mobile.png") -25px 69px no-repeat;
+  }
+
   &__title,
   &__descr,
   &__tagline {
     width: 220px;
+    margin: 0 25px 23px;
+  }
+
+  &__tagline {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    margin-bottom: 60px;
+    display: block;
   }
 
   &__list {
-    margin: 0;
+    margin: 0 0 20px 0;
     padding: 0;
     list-style: none;
   }
+
+  &__list-item {
+    margin-bottom: 10px;
+  }
+
+  &__link {
+    width: 100%;
+  }
 }
+
 @media (min-width: 768px) {
   .companion {
+    border-radius: 0 0 60px 60px;
+
+    &__wrapper {
+      padding: 200px 75px 88px;
+
+      background: url("../img/companion-tablet.png") 40px 140px no-repeat;
+    }
+
     &__title,
     &__descr,
     &__tagline {
       width: 420px;
+      margin: 0 0 55px 0;
     }
+
+    &__descr {
+      margin-bottom: 40px;
+    }
+
+    &__tagline {
+      width: 260px;
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 25px;
+    }
+
     &__list {
       display: flex;
       justify-content: space-between;
+      margin-bottom: 80px;
     }
   }
 }
 
 @media (min-width: 1440px) {
   .companion {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 840px;
-    align-content: space-between;
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: space-between;
+      padding: 200px 75px 134px;
+
+      background: url("../img/companion-desktop.png") 30px 140px no-repeat;
+    }
 
     &__list {
       width: 630px;
-      order: 10;
+      position: absolute;
+      left: 620px;
+    }
+
+    &__link {
+      width: auto;
     }
   }
 }

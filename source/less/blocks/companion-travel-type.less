@@ -1,0 +1,27 @@
+.companion-travel-type {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+
+  list-style: none;
+
+  &__item {
+    height: 21px;
+    width: 24px;
+    opacity: 0.15;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__item--active {
+    opacity: 1;
+  }
+
+  &__item img {
+    max-height: 100%;
+    width: auto;
+  }
+}

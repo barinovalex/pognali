@@ -1,0 +1,212 @@
+.control-field {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  color: @blue-button-text;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2.15px;
+
+  &__measure {
+    margin: 0;
+    padding: 0;
+    opacity: 0.3;
+  }
+
+  &__input-wrapper {
+    margin-top: 10px;
+    position: relative;
+    width: 100%;
+  }
+
+  &__button {
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background-color: #ffffff;
+  }
+
+  &__button--plus,
+  &__button--minus {
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 20px;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+
+      background-color: #cccccc;
+    }
+  }
+
+  &__button--plus {
+    left: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 20px;
+      width: 2px;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+
+      background-color: #cccccc;
+    }
+  }
+
+  &__button--minus {
+    right: 20px;
+  }
+
+  &__button:hover::after,
+  &__button:hover::before {
+    background-color: #999999;
+  }
+
+  &__button:active::after,
+  &__button:active::before {
+    background-color: #cccccc;
+  }
+
+  &__input {
+    box-sizing: border-box;
+    padding: 0 45px;
+    height: 43px;
+    width: 100%;
+
+    border-radius: 4px;
+    border: 1px solid @grey-form-border;
+    background-color: #ffffff;
+
+    color: @blue-button-text;
+    text-align: center;
+  }
+
+  &__input:active {
+    border: 1px solid @blue-text;
+  }
+
+  &__input--date {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+  }
+
+  &__input--date:active {
+    border: none;
+  }
+
+  &__input::-webkit-calendar-picker-indicator {
+    display: none;
+  }
+
+  &__button--prev {
+    width: auto;
+    height: auto;
+    left: 0;
+  }
+
+  &__button--next {
+    width: auto;
+    height: auto;
+    right: 0;
+  }
+
+  &__button &__month-icon {
+    opacity: 0.3;
+  }
+
+  &__button:hover &__month-icon {
+    opacity: 0.5;
+  }
+
+  &__button:active &__month-icon {
+    opacity: 0.1;
+  }
+}
+
+@media (min-width: 768px) {
+  .control-field {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    &__input-wrapper {
+      margin-top: 25px;
+    }
+
+    &__input {
+      height: 70px;
+    }
+
+    &__input--date {
+      border: none;
+
+      font-size: 36px;
+      line-height: 36px;
+    }
+
+    &__month-icon {
+      width: 19px;
+      height: 34px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .control-field {
+    justify-content: start;
+    align-items: center;
+
+    &__label {
+      width: 210px;
+
+      color: @blue-button-text;
+    }
+
+    &__measure {
+      order: 2;
+
+      color: @blue-button-text;
+    }
+
+    &__input-wrapper {
+      width: auto;
+      margin: 0 50px 0 0;
+    }
+
+    &__input-wrapper--date {
+      width: 100%;
+      margin: 0;
+    }
+
+    &__input {
+      width: 181px;
+    }
+
+    &__input--date {
+      width: 100%;
+      border-top: 1px solid @grey-form-border;
+      border-bottom: 1px solid @grey-form-border;
+    }
+  }
+}

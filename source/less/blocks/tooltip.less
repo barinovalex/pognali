@@ -1,0 +1,39 @@
+.tooltip {
+  position: relative;
+
+  &__content {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    max-width: 400px;
+    padding: 16px 24px;
+    border-radius: 4px;
+    margin: 12px 0 0 0;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+
+    background-color: #101d41;
+
+    white-space: nowrap;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: calc(50% - 8px);
+      top: -16px;
+      border: 8px solid transparent;
+      border-bottom-color: #101d41;
+      width: 0;
+      height: 0;
+    }
+  }
+
+  &:hover &__content {
+    display: block;
+  }
+}

@@ -1,0 +1,239 @@
+.profile-settings {
+  position: relative;
+  z-index: 50;
+
+  background-color: @light-blue-background;
+
+  &__wrapper {
+    padding: 23px 25px 53px 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+  }
+
+  &__photo-wrapper {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__change-photo {
+    margin: 19px 0 33px;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    background-color: #dfe3f0;
+
+    color: @blue-text;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+  }
+
+  &__tags {
+    margin: 0 0 25px 0;
+    padding: 0;
+    border: none;
+    position: relative;
+    width: 100%;
+  }
+
+  &__label {
+    padding: 0 17px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+
+    background-color: @light-blue-background;
+
+    color: @blue-button-text;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    text-transform: uppercase;
+
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  &__tags-textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 25px 30px;
+    border-radius: 10px;
+    border: 1px solid @grey-form-border;
+
+    background-color: @light-blue-background;
+  }
+
+  &__transport {
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 100%;
+  }
+
+  &__transport-wrapper {
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid @grey-form-border;
+    display: flex;
+    justify-content: center;
+
+    background-color: @light-blue-background;
+  }
+
+  &__transport-item {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #ffffff;
+  }
+
+  &__transport-item-icon {
+    opacity: 0.15;
+  }
+
+  &__transport-item:hover &__transport-item-icon {
+    opacity: 0.3;
+  }
+
+  &__transport-item:active {
+    background-color: #e2e5f1;
+  }
+
+  &__transport-item:active &__transport-item-icon {
+    opacity: 0.1;
+  }
+
+  &__transport-item-checkbox:checked + &__transport-item-label &__transport-item-icon {
+    fill: @blue-button-text;
+    opacity: 1;
+  }
+
+  &__transport-item-checkbox:checked:hover + &__transport-item-icon {
+    fill: #101e44;
+  }
+
+  &__transport-item-checkbox:checked:hover + &__transport-item-icon {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: 768px) {
+  .profile-settings {
+    &__wrapper {
+      padding: 64px 75px 60px;
+      justify-content: space-between;
+    }
+
+    &__level {
+      order: -2;
+    }
+
+    &__transport {
+      order: -1;
+      width: 308px;
+    }
+
+    &__transport-wrapper {
+      padding: 28px;
+    }
+
+    &__photo-wrapper {
+      border-radius: 10px;
+    }
+
+    &__change-photo {
+      margin: 50px 0;
+      padding: 20px;
+      border-radius: 10px;
+
+      font-size: 20px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    &__transport-item {
+      width: 43px;
+      height: 43px;
+    }
+
+    &__transport-item-icon {
+      height: 21px;
+      width: auto;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .profile-settings {
+    &__wrapper {
+      padding: 73px 60px 60px 124px;
+      justify-content: space-between;
+    }
+
+    &__photo-wrapper {
+      position: absolute;
+      right: 155px;
+      top: -188px;
+      z-index: 10000;
+      width: 190px;
+      height: 190px;
+      border-radius: 10px 10px 0 0;
+    }
+
+    &__change-photo {
+      position: absolute;
+      right: 155px;
+      top: 0;
+      z-index: 10000;
+      width: 190px;
+      height: 47px;
+      border-radius: 0 0 10px 10px;
+      padding: 14px 0;
+      margin: 0;
+
+      font-size: 20px;
+      line-height: 18px;
+      letter-spacing: 2px;
+    }
+
+    &__desktop-hide {
+      display: none;
+    }
+
+    &__level {
+      position: absolute;
+      right: 390px;
+      top: -150px;
+      z-index: 10000;
+    }
+
+    &__tags {
+      width: 730px;
+    }
+
+    &__tags-textarea {
+      height: 94px;
+      font-size: 20px;
+      line-height: 42px;
+    }
+
+    &__transport {
+      order: 2;
+      width: 384px;
+    }
+  }
+}

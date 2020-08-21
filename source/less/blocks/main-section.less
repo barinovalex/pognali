@@ -1,17 +1,31 @@
 .main-section {
-  padding: 0 25px 0;
+  &__title {
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #ff8d30;
+  }
 
-  background-color: @light-blue-background;
+  &__descr {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+    color: #ffffff;
+  }
 }
 
 @media (min-width: 768px) {
   .main-section {
-    padding: 0 40px 0;
-  }
-}
+    &__title {
+      font-size: 45px;
+      line-height: 45px;
+    }
 
-@media (min-width: 1440px) {
-  .main-section {
-    padding: 0 60px 0;
+    &__descr {
+      font-size: 28px;
+      line-height: 33px;
+    }
   }
 }

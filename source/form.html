@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Личный проект</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+<body>
+<header class="page-header page-header--inner">
+  <div class="block-wrapper page-header__wrapper">
+    <a href="#" class="page-header__logo site-logo">
+      <picture>
+        <source srcset="./img/logo-desktop-blue@1x.png 1x, ./img/logo-desktop-blue@2x.png 2x"
+                media="(min-width:1440px)">
+        <source srcset="./img/logo-tablet-blue@1x.png 1x, ./img/logo-tablet-blue@2x.png 2x" media="(min-width:768px)">
+        <img class="site-logo__image page-header__logo-fixed" src="./img/logo-mobile-blue@1x.png"
+             srcset="./img/logo-mobile-blue@2x.png 2x" alt="Погнали?">
+      </picture>
+      <picture>
+        <source srcset="./img/logo-desktop-white@1x.png 1x, ./img/logo-desktop-white@2x.png 2x"
+                media="(min-width:1440px)">
+        <source srcset="./img/logo-tablet-white@1x.png 1x, ./img/logo-tablet-white@2x.png 2x" media="(min-width:768px)">
+        <img class="site-logo__image page-header__logo-static" src="./img/logo-mobile-white@1x.png"
+             srcset="./img/logo-mobile-white@2x.png 2x" alt="Погнали?">
+      </picture>
+    </a>
+    <button class="page-header__mobile-menu" type="button"><span class="visually-hidden">Открыть меню</span></button>
+    <a class="page-header__login" href="#">Авторизация</a>
+    <nav class="main-nav main-nav--closed">
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item site-list__item--active"><a href="#">О сервисе</a></li>
+        <li class="site-list__item"><a href="#">Направления</a></li>
+        <li class="site-list__item"><a href="#">Попутчики</a></li>
+      </ul>
+      <ul class="main-nav__list main-nav__list--user user-list">
+        <li class="user-list__item"><a class="user-list__link user-list__call" href="#">8 800 555-86-28</a></li>
+        <li class="user-list__item"><a class="user-list__link user-list__feedback" href="#">mail@htmlacademy.ru</a></li>
+        <li class="user-list__item"><a class="user-list__link user-list__login" href="#">Авторизация</a></li>
+      </ul>
+      <ul class="main-nav__social social-link">
+        <li class="social-link__item"><a class="social-link__link" href="#">
+          <svg class="social-link__icon social-link__icon--fb" width="11px" height="21px">
+            <use xlink:href="./img/icon-sprite.svg#icon-fb"></use>
+          </svg>
+          <span class="visually-hidden">Facebook</span></a></li>
+        <li class="social-link__item">
+          <a class="social-link__link" href="#">
+            <svg class="social-link__icon social-link__icon--vk" width="23px" height="12px">
+              <use xlink:href="./img/icon-sprite.svg#icon-vk"></use>
+            </svg>
+            <span class="visually-hidden">Вконтакте</span></a></li>
+        <li class="social-link__item">
+          <a class="social-link__link" href="#">
+            <svg class="social-link__icon social-link__icon--ins" width="18px" height="18px">
+              <use xlink:href="./img/icon-sprite.svg#icon-ins"></use>
+            </svg>
+            <span class="visually-hidden">Instagram</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main class="page-main">
+  <div class="page-main__title-wrapper">
+    <div class="block-wrapper page-main__title-wrapper-inner">
+      <h1 class="page-main__title">Направления</h1>
+    </div>
+  </div>
+
+  <section class="profile-settings">
+    <h2 class="visually-hidden">Настройки аккаунта</h2>
+    <form action="">
+      <div class="block-wrapper profile-settings__wrapper">
+        <div class="profile-settings__level companion-level companion-level--profile">
+          <span class="companion-level__level companion-level__level--profile">80</span>
+          <span class="companion-level__title companion-level__title--profile">level</span>
+          <svg class="companion-level__bar companion-level__bar--profile">
+            <circle class="companion-level__bar-circle" cy=50 cx=-50 r=48 fill=transparent stroke="orange"
+                    stroke-width="3" stroke-dasharray="260,500" stroke-dashoffset=0></circle>
+          </svg>
+        </div>
+        <div class="profile-settings__photo-wrapper">
+          <picture>
+            <source media="(min-width:768px)"
+                    srcset="./img/photo-account-tablet@2x.jpg">
+            <img class="profile-settings__photo" src="./img/photo-account-mobile@1x.jpg"
+                 srcset="./img/photo-account-mobile@2x.jpg 2x" alt="Фото аккаунта">
+          </picture>
+        </div>
+        <button class="profile-settings__change-photo"><span class="profile-settings__desktop-hide">Сменить</span> фото
+        </button>
+        <fieldset class="profile-settings__tags">
+          <label for="tags" class="profile-settings__label">Тэги</label>
+          <textarea class="profile-settings__tags-textarea" type="text" id="tags"
+                    placeholder="Коротко о себе в виде 5-8 хештэгов"></textarea>
+        </fieldset>
+        <fieldset class="profile-settings__transport">
+          <div class="profile-settings__transport-wrapper">
+            <legend class="profile-settings__label">Транспорт</legend>
+            <div class="profile-settings__transport-item">
+              <input class="visually-hidden profile-settings__transport-item-checkbox" type="checkbox"
+                     id="transport-aircraft" checked>
+              <label class="profile-settings__transport-item-label tooltip" for="transport-aircraft">
+                <svg class="profile-settings__transport-item-icon" width="14" height="16">
+                  <use xlink:href="./img/icon-sprite.svg#icon-plane"></use>
+                </svg>
+                <p class="tooltip__content">Авиаперелет</p>
+              </label>
+            </div>
+            <div class="profile-settings__transport-item">
+              <input class="visually-hidden profile-settings__transport-item-checkbox" type="checkbox"
+                     id="transport-bus" checked>
+              <label class="profile-settings__transport-item-label tooltip" for="transport-bus">
+                <svg class="profile-settings__transport-item-icon" width="13" height="16">
+                  <use xlink:href="./img/icon-sprite.svg#icon-bus"></use>
+                </svg>
+                <p class="tooltip__content">Автотранспорт</p>
+              </label>
+            </div>
+            <div class="profile-settings__transport-item">
+              <input class="visually-hidden profile-settings__transport-item-checkbox" type="checkbox"
+                     id="transport-bicycle">
+              <label class="profile-settings__transport-item-label tooltip" for="transport-bicycle">
+                <svg class="profile-settings__transport-item-icon" width="19" height="17">
+                  <use xlink:href="./img/icon-sprite.svg#icon-bicycle"></use>
+                </svg>
+                <p class="tooltip__content">Велосипед</p>
+              </label>
+            </div>
+            <div class="profile-settings__transport-item">
+              <input class="visually-hidden profile-settings__transport-item-checkbox" type="checkbox"
+                     id="transport-run" checked>
+              <label class="profile-settings__transport-item-label tooltip" for="transport-run">
+                <svg class="profile-settings__transport-item-icon" width="15" height="17">
+                  <use xlink:href="./img/icon-sprite.svg#icon-run"></use>
+                </svg>
+                <p class="tooltip__content">Пешком</p>
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </form>
+  </section>
+  <section class="plans">
+    <div class="block-wrapper plans__wrapper">
+      <h2 class="plans__title">Мои планы:</h2>
+      <ol class="plan-items plans__list">
+        <li class="plan-items__item plans__list-item">
+          <h3 class="plan-items__title">Франция, Италия</h3>
+          <p class="plan-items__companion">3 попутчика</p>
+          <p class="plan-items__date">26 мар — 29 мар</p>
+          <a href="#" class="plan-items__change-link">Изменить</a>
+        </li>
+        <li class="plan-items__item plans__list-item">
+          <h3 class="plan-items__title">Франция, Италия</h3>
+          <p class="plan-items__companion">3 попутчика</p>
+          <p class="plan-items__date">26 мар — 29 мар</p>
+          <a href="#" class="plan-items__change-link">Изменить</a>
+        </li>
+      </ol>
+    </div>
+  </section>
+  <section class="new-plan">
+    <form action="">
+      <div class="block-wrapper new-plan__wrapper">
+        <h2 class="new-plan__title">Добавить план:</h2>
+        <ul class="new-plan__step-dots">
+          <li class="new-plan__step-dots-item new-plan__step-dots-item--current">Даты</li>
+          <li class="new-plan__step-dots-item">Маршрут</li>
+          <li class="new-plan__step-dots-item">Развлечения</li>
+        </ul>
+        <div class="new-plan__step-wrapper">
+          <h3 class="new-plan__step-title">Шаг 1.<br>
+            Даты пребывания</h3>
+          <p class="new-plan__step-desc">
+            Укажите предпочтительное количество попутчиков, которых
+            вы хотели бы позвать в поездку и ее предполагаемую длительность.
+          </p>
+          <div class="new-plan__fields_wrapper">
+            <div class="new-plan__control-wrapper control-field">
+              <label for="companion" class="control-field__label">Ищу попутчиков:</label>
+              <p class="control-field__measure">Чел.</p>
+              <div class="control-field__input-wrapper">
+                <button class="control-field__button control-field__button--plus"></button>
+                <input class="control-field__input" id="companion" type="text" value="1">
+                <button class="control-field__button control-field__button--minus"></button>
+              </div>
+            </div>
+            <div class="new-plan__checkbox-wrapper">
+              <input class="new-plan__checkbox visually-hidden" type="checkbox" id="child" checked>
+              <label class="new-plan__checkbox-label" for="child">
+                <svg class="new-plan__checkbox-icon" width="12px" height="12px">
+                  <use xlink:href="./img/icon-sprite.svg#icon-checkbox"></use>
+                </svg>
+                Можно с детьми</label>
+            </div>
+            <div class="new-plan__control-wrapper control-field">
+              <label for="period" class="control-field__label">Длительность:</label>
+              <p class="control-field__measure">дн.</p>
+              <div class="control-field__input-wrapper">
+                <button class="control-field__button control-field__button--plus"></button>
+                <input class="control-field__input" id="period" type="text" value="1">
+                <button class="control-field__button control-field__button--minus"></button>
+              </div>
+            </div>
+
+          </div>
+          <div class="new-plan__control-wrapper control-field">
+            <label for="month" class="control-field__label control-field__label--date"
+                   aria-label="Выбрать месяц и год поездки"></label>
+            <div class="control-field__input-wrapper control-field__input-wrapper--date">
+              <button class="control-field__button control-field__button--prev">
+                <svg class="control-field__month-icon" width="9px" height="18px">
+                  <use xlink:href="./img/icon-sprite.svg#icon-prev"></use>
+                </svg>
+              </button>
+              <input class="control-field__input control-field__input--date" id="month" type="month" value="2019-03">
+              <button class="control-field__button control-field__button--next">
+                <svg class="control-field__month-icon" width="9px" height="18px">
+                  <use xlink:href="./img/icon-sprite.svg#icon-next"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <table class="new-plan__сalendar calendar">
+            <thead>
+            <tr class="calendar__days-of-week">
+              <th class="calendar__item">П</th>
+              <th class="calendar__item">В</th>
+              <th class="calendar__item">С</th>
+              <th class="calendar__item">Ч</th>
+              <th class="calendar__item">П</th>
+              <th class="calendar__item calendar__item--weekend">С</th>
+              <th class="calendar__item calendar__item--weekend">В</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td class="calendar__item calendar__item--disabled">23</td>
+              <td class="calendar__item calendar__item--disabled">24</td>
+              <td class="calendar__item calendar__item--disabled">25</td>
+              <td class="calendar__item calendar__item--disabled">26</td>
+              <td class="calendar__item calendar__item--disabled">27</td>
+              <td class="calendar__item calendar__item--disabled">28</td>
+              <td class="calendar__item calendar__item--disabled">1
+                <span class="calendar__item-1st-of-month">&nbsp;мар</span></td>
+            </tr>
+            <tr>
+              <td class="calendar__item calendar__item--disabled">2</td>
+              <td class="calendar__item calendar__item--disabled">3</td>
+              <td class="calendar__item calendar__item--disabled">4</td>
+              <td class="calendar__item calendar__item--disabled">5</td>
+              <td class="calendar__item calendar__item--disabled">6</td>
+              <td class="calendar__item calendar__item--disabled">7</td>
+              <td class="calendar__item calendar__item--disabled">8</td>
+            </tr>
+            <tr>
+              <td class="calendar__item calendar__item--disabled">9</td>
+              <td class="calendar__item calendar__item--disabled">10</td>
+              <td class="calendar__item calendar__item--disabled">11</td>
+              <td class="calendar__item calendar__item--disabled">12</td>
+              <td class="calendar__item calendar__item--disabled">13</td>
+              <td class="calendar__item calendar__item--disabled">14</td>
+              <td class="calendar__item calendar__item--disabled">15</td>
+            </tr>
+            <tr>
+              <td class="calendar__item calendar__item--disabled">16</td>
+              <td class="calendar__item calendar__item--disabled">17</td>
+              <td class="calendar__item calendar__item--disabled">18</td>
+              <td class="calendar__item calendar__item--disabled">19</td>
+              <td class="calendar__item calendar__item--disabled">20</td>
+              <td class="calendar__item calendar__item--disabled">21</td>
+              <td class="calendar__item calendar__item--disabled">22</td>
+            </tr>
+            <tr>
+              <td class="calendar__item calendar__item--disabled">23</td>
+              <td class="calendar__item calendar__item--disabled">24</td>
+              <td class="calendar__item calendar__item--disabled">25</td>
+              <td class="calendar__item calendar__item--checked" tabindex="0">26<span
+                class="calendar__item-text">Заезд</span></td>
+              <td class="calendar__item calendar__item--checked" tabindex="0">27</td>
+              <td class="calendar__item calendar__item--checked" tabindex="0">28<span
+                class="calendar__item-text">Выезд</span></td>
+              <td class="calendar__item">29</td>
+            </tr>
+            <tr>
+              <td class="calendar__item">30</td>
+              <td class="calendar__item">31</td>
+              <td class="calendar__item">1<span class="calendar__item-1st-of-month">&nbsp;апр</span></td>
+              <td class="calendar__item">2</td>
+              <td class="calendar__item">3</td>
+              <td class="calendar__item">4</td>
+              <td class="calendar__item">5</td>
+            </tr>
+            </tbody>
+          </table>
+          <a href="#" class="button new-plan__next-step">Следующий шаг</a>
+        </div>
+      </div>
+    </form>
+  </section>
+</main>
+<footer class="page-footer">
+  <div class="block-wrapper page-footer__wrapper">
+    <a href="#" class="page-footer__logo site-logo">
+      <picture>
+        <source srcset="./img/logo-desktop-blue@1x.png 1x, ./img/logo-desktop-blue@2x.png 2x"
+                media="(min-width:1440px)">
+        <source srcset="./img/logo-tablet-blue@1x.png 1x, ./img/logo-tablet-blue@2x.png 2x" media="(min-width:768px)">
+        <img class="site-logo__image" src="./img/logo-mobile-blue@1x.png"
+             srcset="./img/logo-mobile-blue@2x.png 2x" alt="Погнали?">
+      </picture>
+    </a>
+    <ul class="social-link page-footer__social">
+      <li class="social-link__item"><a class="social-link__link social-link__link--yellow" href="#">
+        <svg class="social-link__icon social-link__icon--blue social-link__icon--fb" width="11px" height="21px">
+          <use xlink:href="./img/icon-sprite.svg#icon-fb"></use>
+        </svg>
+        <span class="visually-hidden">Facebook</span></a></li>
+      <li class="social-link__item">
+        <a class="social-link__link social-link__link--yellow" href="#">
+          <svg class="social-link__icon social-link__icon--blue social-link__icon--vk" width="23px" height="12px">
+            <use xlink:href="./img/icon-sprite.svg#icon-vk"></use>
+          </svg>
+          <span class="visually-hidden">Вконтакте</span></a></li>
+      <li class="social-link__item">
+        <a class="social-link__link social-link__link--yellow" href="#">
+          <svg class="social-link__icon social-link__icon--blue social-link__icon--ins" width="18px" height="18px">
+            <use xlink:href="./img/icon-sprite.svg#icon-ins"></use>
+          </svg>
+          <span class="visually-hidden">Instagram</span></a></li>
+    </ul>
+    <div class="page-footer__copyright">
+      <b class="page-footer__copyright-text">Разработано:</b>
+      <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+        <svg width="27px" height="34px">
+          <use xlink:href="./img/icon-sprite.svg#icon-htmlacademy"></use>
+        </svg>
+        HTML Academy</a>
+    </div>
+  </div>
+</footer>
+<section class="modal business-rates" data-modal="price">
+  <div class="modal__wrapper">
+    <h2 class="business-rates__title">Бизнес-тарифы</h2>
+    <ol class="price__list price__list--modal business-rates__price">
+      <li class="price__item price__item--modal">
+        <p class="price__name">Реклама у блоггера</p>
+        <p class="price__value">300 000 руб./пост</p>
+      </li>
+      <li class="price__item price__item--modal">
+        <p class="price__name">Накрутка подписчиков</p>
+        <p class="price__value">от 1 руб./шт.</p>
+      </li>
+      <li class="price__item price__item--modal">
+        <p class="price__name">Лайки от ботов</p>
+        <p class="price__value">от 20 коп./лайк</p>
+      </li>
+      <li class="price__item price__item--modal">
+        <p class="price__name">Ваш продакт-плейсмент</p>
+        <p class="price__value">Индивидуально</p>
+      </li>
+    </ol>
+    <button class="modal__close business-rates__close js-modal-close">Закрыть окно</button>
+  </div>
+</section>
+<script>
+  //микро-библиотека closest, ищет элемент, который находится выше по дереву и класс которого совпадает с тем который мы ищем.
+  !function (e) {
+    "function" != typeof e.matches && (e.matches = e.msMatchesSelector || e.mozMatchesSelector || e.webkitMatchesSelector || function (e) {
+      for (var t = this, o = (t.document || t.ownerDocument).querySelectorAll(e), n = 0; o[n] && o[n] !== t;) ++n;
+      return Boolean(o[n])
+    }), "function" != typeof e.closest && (e.closest = function (e) {
+      for (var t = this; t && 1 === t.nodeType;) {
+        if (t.matches(e)) return t;
+        t = t.parentNode
+      }
+      return null
+    })
+  }(window.Element.prototype);
+
+  let navMain = document.querySelector('.main-nav');
+  let navToggle = document.querySelector('.page-header__mobile-menu');
+
+  let bodyMain = document.querySelector("main");
+  let bodyHeader = document.querySelector("header");
+  let hHeight;
+
+  var func = function (e) {
+    if (navMain.classList.contains('main-nav--closed')) {
+      navMain.classList.remove('main-nav--closed');
+      navMain.classList.add('main-nav--opened');
+      navToggle.classList.add('page-header__mobile-menu--type-close');
+      bodyHeader.classList.add("page-header--position-fixed");
+    } else {
+      navMain.classList.add('main-nav--closed');
+      navMain.classList.remove('main-nav--opened');
+      navToggle.classList.remove('page-header__mobile-menu--type-close');
+      let y = window.pageYOffset;
+      if (y > 1) {
+        bodyHeader.classList.add("page-header--position-fixed");
+      } else {
+        bodyHeader.classList.remove("page-header--position-fixed");
+      }
+    }
+  }
+  navToggle.addEventListener("click", func, false);
+
+  function setTopPadding() {
+    hHeight = bodyHeader.offsetHeight;
+    bodyMain.style.paddingTop = hHeight + "px";
+  }
+
+  function onScroll() {
+    window.addEventListener("scroll", callbackFunc);
+
+    function callbackFunc() {
+      let y = window.pageYOffset;
+      if (y > 10) {
+               bodyHeader.classList.add("page-header--position-fixed");
+      } else {
+        if (navMain.classList.contains('main-nav--closed')) {
+          bodyHeader.classList.remove("page-header--position-fixed");
+        }
+      }
+    }
+  }
+
+  window.onload = function () {
+    //   setTopPadding();
+    onScroll();
+  };
+
+  document.addEventListener('DOMContentLoaded', function () {
+
+    let modalButtons = document.querySelectorAll('.js-open-modal');
+    let closeButtons = document.querySelectorAll('.js-modal-close');
+    let modals = document.querySelectorAll('.modal');
+
+    modalButtons.forEach(function (item) {
+
+      item.addEventListener('click', function (e) {
+
+        e.preventDefault();
+
+        let modalId = this.getAttribute('data-modal'),
+          modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
+
+        modalElem.classList.add('modal--open');
+
+      }); // end click
+    }); // end foreach
+
+    closeButtons.forEach(function (item) {
+
+      item.addEventListener('click', function (e) {
+        var parentModal = this.closest('.modal');
+
+        parentModal.classList.remove('modal--open');
+      });
+
+    }); // end foreach
+
+    document.body.addEventListener('keyup', function (e) {
+      var key = e.keyCode;
+
+      if (key == 27) {
+
+        document.querySelector('.modal--open').classList.remove('modal--open');
+      }
+      ;
+    }, false);
+
+  }); // end ready
+
+</script>
+</body>
+</html>

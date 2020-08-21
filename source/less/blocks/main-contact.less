@@ -1,6 +1,70 @@
+.main-contact {
+  margin-top: -30px;
+  position: relative;
+  z-index: 4;
+  border-radius: 0 0 30px 30px;
+
+  background-color: @yellow-buttons;
+
+  &__wrapper {
+    padding: 60px 25px 35px 25px;
+  }
+
+  &__address {
+    margin: 0 0 35px 0;
+  }
+
+  &__link {
+    box-sizing: border-box;
+    width: 100%;
+    padding-right: 0;
+    border: 3px solid @dark-blue-background;
+
+    &:hover {
+      background-color: @dark-blue-background;
+
+      color: #ffffff;
+
+      &::after {
+        border-color: transparent transparent transparent rgba(255, 255, 255, 1);
+      }
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+
+      &::after {
+        border-color: transparent transparent transparent rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .main-contact {
+    margin-top: -60px;
+    border-radius: 0 0 60px 60px;
+
+    &__wrapper {
+      padding: 107px 75px 85px 75px;
+    }
+
+  }
+}
+
 @media (min-width: 1440px) {
   .main-contact {
-    display: flex;
-    justify-content: space-between;
+
+    &__wrapper {
+      padding: 114px 134px 50px 280px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__link {
+      width: auto;
+      height: 81px;
+      padding-right: 67px;
+    }
   }
 }

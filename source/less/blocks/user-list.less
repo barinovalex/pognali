@@ -1,11 +1,175 @@
 .user-list {
-  margin: 0;
+
   padding: 0;
   list-style: none;
+  display: flex;
+  flex-direction: column;
+
+  &__link {
+    color: @dark-blue-background;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  &__item:last-child {
+    order: -1;
+  }
+
+  &__login {
+    display: block;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin-bottom: 51px;
+
+    color: @blue-text;
+    font-size: 17px;
+    line-height: 30px;
+    text-align: center;
+
+    background-color: @yellow-buttons;
+
+    &:hover {
+      background-color: #ffbd30;
+    }
+
+    &:active {
+      color: #b98c32;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 23px;
+  }
+
+  &__item:not(:last-child) a {
+    display: block;
+    position: relative;
+    margin-left: 61px;
+  }
+
+  &__item:not(:last-child) a::before {
+    content: "";
+    width: 45px;
+    height: 45px;
+    display: block;
+    position: absolute;
+    left: -61px;
+    top: -12px;
+
+    background-color: #121936;
+    border-radius: 50%;
+  }
+
+  &__call::before {
+    background: url("../img/contacts-phone.svg") 50% 50% no-repeat;
+    background-size: 18px 18px;
+  }
+
+  &__feedback::before {
+    background: url("../img/contacts-mail.svg") 50% 50% no-repeat;
+    background-size: 18px 18px;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .user-list {
+    &__link {
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    &__item:not(:last-child) {
+      margin-bottom: 40px;
+    }
+
+    &__item:not(:last-child) a {
+      margin-left: 91px;
+    }
+
+    &__item:not(:last-child) a::before {
+      width: 68px;
+      height: 68px;
+      left: -91px;
+      top: -19px;
+
+      background-size: 27px 27px;
+    }
+
+    &__login {
+      display: none;
+    }
+  }
 }
 
 @media (min-width: 1440px) {
   .user-list {
-    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &__item {
+      margin: 0;
+    }
+
+    &__item:last-child {
+      order: 1;
+    }
+
+    &__link {
+      font-size: 0;
+      line-height: 0;
+    }
+
+    &__item:not(:last-child) {
+      margin: 0;
+    }
+
+    &__item:not(:last-child) a {
+      margin: 0;
+    }
+
+    &__item:not(:last-child) a::before {
+      content: "";
+      width: 50px;
+      height: 50px;
+      display: block;
+      position: static;
+      background-size: 18px 18px;
+      background-color: #ff8d30;
+      border-radius: 50%;
+    }
+
+    &__item:not(:last-child) a:hover::before {
+      background-color: #f26926;
+    }
+
+    &__item:not(:last-child) a:active::before {
+      background-color: #f26926;
+      opacity: 0.6;
+    }
+
+    &__call::before {
+      background: url("../img/topmenu-phone.svg") 50% 50% no-repeat;
+      background-size: 18px 18px;
+    }
+
+    &__feedback::before {
+      background-color: #ffbd30;
+      background: url("../img/topmenu-mail.svg") 50% 50% no-repeat;
+      background-size: 18px 14px;
+    }
+
+    &__login {
+      display: block;
+      margin: 0;
+      position: static;
+
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 700;
+    }
   }
 }

@@ -1,13 +1,117 @@
+.registration {
+  margin-top: -30px;
+  position: relative;
+  z-index: 5;
+  border-radius: 0 0 30px 30px;
+  background-color: @dark-blue-background;
+
+  &__wrapper {
+    padding: 100px 25px 30px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__descr {
+    width: 210px;
+    margin: 0 0 30px;
+
+    text-align: center;
+
+    & a {
+      color: @yellow-buttons;
+      text-decoration: none;
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &__block-form {
+    margin-bottom: 30px;
+  }
+
+  &__descr--bottom {
+    margin-bottom: 20px;
+  }
+
+  &__contact-wrapper {
+    align-self: start;
+  }
+
+  &__contact {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .registration {
+    margin-top: -60px;
+    border-radius: 0 0 60px 60px;
+
+    &__wrapper {
+      padding: 123px 75px 60px 75px;
+    }
+
+
+    &__title {
+      margin-bottom: 56px;
+    }
+
+    &__descr {
+      width: 610px;
+      margin-bottom: 65px;
+    }
+
+    &__block-form {
+      margin-bottom: 56px;
+    }
+
+    &__descr--bottom {
+      margin-bottom: 40px;
+    }
+  }
+}
+
 @media (min-width: 1440px) {
   .registration {
-    height: 840px;
+    &__wrapper {
+      padding: 165px 135px 60px 135px;
+    }
 
-    &__phone {
+    &__descr {
+      margin-bottom: 60px;
+    }
+
+    &__block-form {
+      margin-bottom: 68px;
+    }
+
+    &__descr--bottom {
+      margin-bottom: 45px;
+    }
+
+    &__contact-wrapper {
+      align-self: center;
+    }
+
+    &__contact {
       display: inline-block;
     }
 
-    &__email {
-      display: inline-block;
+    &__contact:first-child {
+      margin-right: 105px;
     }
   }
 }

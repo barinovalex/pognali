@@ -1,34 +1,106 @@
 .directions {
+  margin-top: -30px;
+  border-radius: 0 0 30px 30px;
+  position: relative;
+  z-index: 20;
+
+  background-color: @light-blue-background;
+
+  &__wrapper {
+    padding: 70px 25px 30px;
+    position: relative;
+  }
+
   &__title,
   &__descr {
+    margin-left: 25px;
+    margin-bottom: 4px;
     width: 220px;
   }
 
+  &__descr {
+    color: @dark-text;
+    margin-bottom: 60px;
+  }
+
   &__countries {
-    margin: 0;
+    margin: 0 0 16px 0;
     padding: 0;
     list-style: none;
   }
+
+  &__link {
+    width: 100%;
+  }
+
 }
 
 @media (min-width: 768px) {
   .directions {
+    margin-top: -60px;
+    border-radius: 0 0 60px 60px;
+
+    &__wrapper {
+      padding: 134px 75px 60px;
+
+      background: url("../img/flags-back@1x.png") calc(100% - 40px) 140px no-repeat;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background: url("../img/flags-back@2x.png") calc(100% - 40px) 140px no-repeat;
+        background-size: 289px auto;
+      }
+    }
+
     &__title,
     &__descr {
-      width: 420px;
+      margin-left: 0;
+      width: 345px;
+      margin-bottom: 60px;
+    }
+
+    &__descr {
+      margin-bottom: 110px;
+    }
+
+    &__countries {
+      margin: 0 0 43px 0;
     }
   }
 }
 
 @media (min-width: 1440px) {
   .directions {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 840px;
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+ //     height: 750px;
+      padding: 220px 0 60px 130px;
+      box-sizing: border-box;
+
+      background: url("../img/flags-back@1x.png") calc(100% - 60px) 148px no-repeat;
+    }
 
     &__countries {
-      order: -1;
+      position: absolute;
+    }
+
+    &__title {
+      margin-left: 730px;
+      margin-bottom: 50px;
+    }
+
+    &__descr {
+      margin-left: 730px;
+      margin-bottom: 80px;
+    }
+
+    &__link {
+      margin-top: auto;
+      margin-bottom: 60px;
+      margin-left: 730px;
+      width: auto;
+      align-self: start;
     }
   }
 }
