@@ -42,6 +42,13 @@
     }
   }
 
+  &__list--modal {
+    &::before,
+    &::after {
+      width: 100%;
+    }
+  }
+
   &__item {
     width: 200px;
     position: relative;
@@ -90,6 +97,17 @@
       bottom: -15px;
 
       background-color: #e1e3e9;
+    }
+  }
+
+  &__item--modal {
+    width: 100%;
+
+    font-size: 16px;
+    line-height: 22px;
+
+    &::before {
+      display: none;
     }
   }
 
@@ -164,6 +182,19 @@
       &:not(:last-child)::after {
         bottom: 0;
       }
+    }
+
+    &__item--modal {
+      width: 100%;
+      font-size: 22px;
+    }
+
+    &__item--modal &__value {
+      width: 100%;
+    }
+
+    &__item--modal &__name {
+      width: 100%;
     }
 
     &__value {

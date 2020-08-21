@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  position: relative;
 
 //  border: 3px solid #ff8d30;
   border-radius: 50%;
@@ -34,6 +34,20 @@
     }
   }
 
+  &__level--profile {
+    margin: 20px 0 0 0;
+    color: @blue-text;
+    font-size: 38px;
+    line-height: 38px;
+
+    &::after {
+      width: 49px;
+      height: 2px;
+      background-color: @grey-form-border;
+      opacity: 1;
+    }
+  }
+
   &__title {
     display: block;
 
@@ -41,6 +55,13 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 14px;
+  }
+
+  &__title--profile {
+    color: @dark-text;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22.17px;
   }
 
   &__bar {
@@ -51,7 +72,27 @@
     top: -1px;
   }
 
+  &__bar--profile {
+    height: 100px;
+    width: 100px;
+  }
+
   &__bar-circle {
     transform: rotate(-90deg);
+  }
+}
+
+.companion-level--profile {
+  width: 98px;
+  height: 98px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+@media (min-width: 1440px) {
+  .companion-level {
+    &__level--profile,
+    &__title--profile {
+      color: #ffffff;
+    }
   }
 }

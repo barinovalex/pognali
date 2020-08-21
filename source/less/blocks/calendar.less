@@ -1,0 +1,63 @@
+.calendar {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+
+  color: rgba(68, 68, 68, 1);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+
+  &__item-1st-of-month {
+    display: none;
+  }
+
+  &__item-text {
+    display: none;
+  }
+
+  & tr {
+    border: 1px solid #d4d9eb;
+  }
+
+  &__item {
+    border: 1px solid #d4d9eb;
+    background-color: @light-blue-background;
+  }
+
+  & td:focus {
+    border: 1px solid #ff5c23;
+    outline: 1px solid #ff5c23;
+  }
+
+  & thead tr {
+    border: none;
+  }
+
+  &__item--weekend {
+    color: #ff5c23;
+  }
+
+  &__item--checked {
+    background-color: @blue-button-text;
+
+    color: #ffffff;
+  }
+
+  &__item--disabled {
+    color: rgba(68, 68, 68, 0.3);
+    background-color: #ffffff;
+  }
+}
+
+@media (min-width: 768px) {
+  .calendar {
+    margin-bottom: 46px;
+
+    font-size: 20px;
+    line-height: 70px;
+    letter-spacing: 2px;
+  }
+}
